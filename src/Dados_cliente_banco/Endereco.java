@@ -1,6 +1,6 @@
 package Dados_cliente_banco;
 
-public class Endereco {
+public class Endereco  {
 
     private String cep;
     private String logradouro;

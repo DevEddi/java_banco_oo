@@ -1,6 +1,8 @@
 package Dados_cliente_banco;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Cliente {
 
@@ -10,6 +12,9 @@ public class Cliente {
     private String sexo;
     private String naturalidade;
     private Date nascimento;
+
+    private List<Endereco> enderecos = new ArrayList<Endereco>();
+
 
     public String getCPF() {
         return CPF;
@@ -57,5 +62,18 @@ public class Cliente {
 
     public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
+    }
+
+
+    public void listarEnderecos(){
+        for (Endereco endereco: this.enderecos){
+            System.out.println("Enderecos:");
+            System.out.println("CEP:" + endereco.getCep());
+            System.out.println("logradouro:" + endereco.getLogradouro());
+            System.out.println("Número:" + endereco.getNumero());
+            System.out.println("Complemento:" + endereco.getComplemento());
+            System.out.println("Cidade:" + endereco.getComplemento());
+            System.out.println("UF:" + endereco.getUf());
+        }
     }
 }
