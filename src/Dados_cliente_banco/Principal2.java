@@ -29,10 +29,12 @@ public class Principal2 {
         Cargo cargo_1 = new Cargo();
         cargo_1.setNome("Caixa");
 
-        Collection<Cargo> cargos_dos_funcionarios = new ArrayList<>();
-        cargos_dos_funcionarios.add(cargo_1);
 
-        funcionario.setCargos(cargos_dos_funcionarios);
+        Cargo cargo_2 = new Cargo();
+        cargo_2.setNome("Gerente");
+
+        funcionario.addCargo(cargo_1);
+        funcionario.addCargo(cargo_2);
 
     }
 }

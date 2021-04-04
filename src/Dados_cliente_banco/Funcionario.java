@@ -26,5 +26,7 @@ public class Funcionario  extends Pessoa{
         this.cargos = cargos;
     }
 
-    public void addCargo ()
+    public void addCargo ( Cargo cargo ){
+        this.cargos.add(cargo);
+    }
 }
