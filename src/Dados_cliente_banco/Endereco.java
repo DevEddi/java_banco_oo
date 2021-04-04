@@ -1,6 +1,6 @@
 package Dados_cliente_banco;
 
-public class Endereco {
+public class Endereco extends Cliente {
 
     private String cep;
     private String logradouro;
@@ -8,6 +8,7 @@ public class Endereco {
     private String complemento;
     private String cidade;
     private String uf;
+    private  Cliente cliente;
 
     public String getCep() {
         return cep;
@@ -55,5 +56,13 @@ public class Endereco {
 
     public void setUf(String uf) {
         this.uf = uf;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }

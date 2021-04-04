@@ -1,10 +1,11 @@
 package Dados_cliente_banco;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Collection;
 import java.util.List;
 
-public class Cliente extends Pessoa {
+public class Cliente extends Pessoa{
+
     private Boolean vip;
 
     public Boolean getVip() {
@@ -15,10 +16,10 @@ public class Cliente extends Pessoa {
         this.vip = vip;
     }
 
-    private List<Endereco> enderecos = new ArrayList<Endereco>();
+    private Collection<Endereco> enderecos = new ArrayList<Endereco>();
 
     public void listarEnderecos(){
-        for (Endereco endereco: this.enderecos){
+        for (Endereco endereco: this.getEnderecos()){
             System.out.println("Enderecos:");
             System.out.println("CEP:" + endereco.getCep());
             System.out.println("logradouro:" + endereco.getLogradouro());
@@ -29,5 +30,11 @@ public class Cliente extends Pessoa {
         }
     }
 
+    public  Collection<Endereco> getEnderecos() {return enderecos;}
 
+    public void setEndereco(Collection<Endereco> endereco) {this.enderecos = enderecos;}
+
+    public void addEndereco(Endereco endereco){
+        this.enderecos.add(endereco);
+    }
 }
