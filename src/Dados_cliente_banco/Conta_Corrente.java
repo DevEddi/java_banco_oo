@@ -12,11 +12,17 @@ public class Conta_Corrente extends Conta {
         this.limite = limite;
     }
 
-    //Transfere o valor da conta Atual para a conta do Destino 'contadestino'
-    public void transferir(Conta contdestino, Double valor){
+    //Transfere o valor da conta Atual para a conta do Destino contadestino
+    public void transferir(Conta contdestino, Double valor) {
+        Double salddoLimite = this.getSaldo() + this.getLimite();
 
+        if (saldoLimite >= valor) {
+            this.setSaldo(this.getSaldo() - valor);
+            conta.Destino.depositar(valor);
+        }
     }
-    //Somar
+
+    //Soma o valor recebido ao saldo da conta
     public void receber(Double valor){
 
     }
